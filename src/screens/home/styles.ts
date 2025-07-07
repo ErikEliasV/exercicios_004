@@ -57,11 +57,10 @@ export const ViewRow = styled.View`
 `
 
 export const ViewList = styled.ScrollView`
-    width: 100%;
-    margin-top: 30px;   
-    gap: 10px;
+    width: 100%;  
     min-height: 100px;
     flex-direction: column;
+    margin-top: 20px;
 `
 
 export const ViewTask = styled.View`
@@ -72,11 +71,33 @@ export const ViewTask = styled.View`
     align-items: center;
     justify-content: center;
     padding: 10px;
-    margin-top: 10px;
+    width: 80%;
 `
 
 export const TaskText = styled.Text`
     color: #FFFFFF;
     font-size: 16px;
+`
+
+export const ButtonRmv= styled(TouchableOpacity)`
+    background-color: #E53935;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+`
+export const ButtonRmvText = styled.Text`
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+`
+export const ViewRowRm = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
 `
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Title, Input, ButtonAdd, ButtonAddText, ViewRow, ViewList, ViewTask, TaskText, SubTitle } from './styles'
+import { Container, Title, Input, ButtonAdd, ButtonAddText, ViewRow, ViewList, ViewTask, TaskText, SubTitle, ButtonRmv, ButtonRmvText, ViewRowRm } from './styles'
 
 export function Home() {
     const [taskText, setTaskText] = useState('')
@@ -10,6 +10,10 @@ export function Home() {
             setTasks(prevTasks => [...prevTasks, taskText])
             setTaskText('')
         }
+    }
+
+    function handleRemoveTask(index: number) {
+        setTasks(prevTasks => prevTasks.filter((_, i) => i !== index))
     }
 
     return (
@@ -31,11 +35,16 @@ export function Home() {
             
             <ViewList>
                 {tasks.map((task, index) => (
-                    <ViewTask key={index}>
+                <ViewRowRm key={index}> 
+                    <ViewTask>
                         <TaskText>
                             {task}
                         </TaskText>
                     </ViewTask>
+                        <ButtonRmv onPress={() => handleRemoveTask(index)}>
+                            <ButtonRmvText>-</ButtonRmvText>
+                        </ButtonRmv>
+                </ViewRowRm>
                 ))}
             </ViewList>
         </Container>
