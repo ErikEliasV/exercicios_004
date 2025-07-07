@@ -12,6 +12,7 @@ export const Title = styled.Text`
     color: #FFFFFF;
     font-size: 24px;
     font-weight: bold;
+    margin-top: 90px;
 `
 
 export const SubTitle = styled.Text`
@@ -55,10 +56,11 @@ export const ViewRow = styled.View`
     margin-top: 30px;
 `
 
-export const ViewList = styled.View`
+export const ViewList = styled.ScrollView`
     width: 100%;
-    margin-top: 30px;
+    margin-top: 30px;   
     gap: 10px;
+    min-height: 100px;
     flex-direction: column;
 `
 
@@ -70,6 +72,7 @@ export const ViewTask = styled.View`
     align-items: center;
     justify-content: center;
     padding: 10px;
+    margin-top: 10px;
 `
 
 export const TaskText = styled.Text`
